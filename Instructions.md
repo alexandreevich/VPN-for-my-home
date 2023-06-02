@@ -1,12 +1,12 @@
 # My personal VPN
 This is my checklist for creating a personal VPN service. I used these commands and the service is still working.
-As host VM I'm use racknerd . com 
+As host VM I'm use racknerd . com  [MyReferalLink](https://my.racknerd.com/aff.php?aff=8305)
 1 Gb KVM VPS with 1 vCPU Core. I could have used less power, but I took it with a reserve. It may be needed for something else. 
 Let's go!
 
 
 ---
-## 1.Commands and comments
+## 1. Commands and comments
 ### Authorization 
 
 1. **ssh-keygen** — At first, generate ssh-key pair on local pc
@@ -23,7 +23,7 @@ Let's go!
 1. **apt update && apt upgrade -y**  - as a habit
 
 ---
-## 2.Safety 
+## 2. Safety 
 ### An important part for safety and internet hygiene
 
 1. **apt install ufw**  - firewall who cover your VM. 
@@ -32,7 +32,7 @@ Let's go!
 * ~~#"-A ufw-before-input -p icmp —icmp-type echo-request -j ACCEPT"~~  - comment this line
 * **A ufw-before-input -p icmp —icmp-type echo-request -j DROP** - add this line
 *Really, I dont know why, but it is important for the succesfull pass the Tunnel Detection test (two-way ping).
-3. **Open this port's
+3. **Open this port's**
 * ufw allow 80
 * ufw allow 443
 * ufw allow  - your SSH port from 1.4 
@@ -41,7 +41,7 @@ Let's go!
 4. ufw disable && ufw enable** - Finally, restart firewall. 
 
 ### Autoupdate safety
-**apt-get install unattended-upgrades
+**apt-get install unattended-upgrades**
 **nano /etc/apt/apt.conf.d/20auto-upgrades:**
 * APT::Periodic::Update-Package-Lists "1";
 * APT::Periodic::Unattended-Upgrade "1";
@@ -49,8 +49,8 @@ Let's go!
 * APT::Periodic::AutocleanInterval "7";
 
 ---
-## For mobile
-### I choise Wireguard. 
+## 3. For mobile
+### I choise Wireguard. Easy & fastl.
 **apt install -y curl**
 **curl -O [https://github.com/angristan/wireguard-install](https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh)**
 **chmod +x wireguard-install.sh** 
@@ -62,11 +62,12 @@ Download wireguard to your device, then run the skript. He will give you a QR co
 
 ---
 
-## For router
+## 4. For router
 ### My router support openVPN, lets configurate him. 
-**wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh**
-**chmod +x openvpn-install.sh**
-**./openvpn-install.sh**
+* **wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh**
+* **chmod +x openvpn-install.sh**
+* **./openvpn-install.sh**
+
 *Then copy on your PC file and add to router. A I used the program File2Zilla.* 
 
 ---
