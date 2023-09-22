@@ -53,7 +53,9 @@ Let's go!
 ## 3. For mobile
 ### I choise Wireguard. Easy & fastl.
 **apt install -y curl**
-**curl -O [https://github.com/angristan/wireguard-install](https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh)**
+
+**curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh**
+
 **chmod +x wireguard-install.sh** 
 
 *Do not forget about the open port from point 2.3, when you will run your app. 
