@@ -9,7 +9,8 @@ Let's go!
 ## 1. Commands and comments
 ### Authorization 
 
-1. **ssh-keygen** — At first, generate ssh-key pair on local pc
+1. **ssh-keygen** — At first, generate ssh-key pair on local pc ( *ssh-keygen -t rsa -C "your_email@example.com", then /home/.ssh/id_newname* 
+   
 
 1. **ssh root@123.123.123.123**  — connecting via the terminal 
 
